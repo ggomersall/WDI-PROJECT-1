@@ -1,0 +1,23 @@
+// GAME IDEA - DUCK HUNT
+// my game will be based on duck hunt
+
+// it will have an on click listener for an image of ducks moving across the
+// screen.
+
+// if a duck is clicked the player will score a point 
+// either 5 points or 10 points not sure yet
+
+// it will be a two player game, player 1 starting first.
+// player will have certain amount of seconds game play maybe 
+// between 15 and 20 seconds
+// after player 1 has played, it will be player 2 turn.
+
+// he will have the same game play as player one
+
+// after player 1 and 2 have finished their game, the total 
+// scores they have gained
+// will be compared
+
+// and a winner will be announced
+
+

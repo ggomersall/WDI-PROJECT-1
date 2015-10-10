@@ -1,0 +1,31 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+body h1{
+text-align: center;
+
+}
+
+#game-area {
+  width: 900px;
+  height: 550px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+}
+#game-background {
+  background-color: rgb(92, 132, 240);
+  min-height: 550px;
+}
+#grass-area {
+  /*position: absolute;*/
+  top: 80px;
+  /*right: 0;*/
+  background-image: url(../images/grass900px.png);
+  height: 240px;
+  margin-top: 240px;
+
+}
