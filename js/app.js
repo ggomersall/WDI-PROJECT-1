@@ -77,7 +77,9 @@ $(function(){
 
   }
 
-  function getWinner() {
+  function getWinner(playerOneScore, playerTwoScore) {
+
+    
 
 
   }
