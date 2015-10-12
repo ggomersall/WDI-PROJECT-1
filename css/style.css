@@ -13,19 +13,64 @@ text-align: center;
   width: 900px;
   height: 550px;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   margin-top: 20px;
 }
 #game-background {
   background-color: rgb(92, 132, 240);
   min-height: 550px;
 }
+
+#game-bar-top {
+  background-color: orange;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 50px; 
+  position: relative;
+  top: 0;
+}
+
+li{
+  display: inline;
+  float: left;
+  /*clear: ;*/
+}
+
+
+
 #grass-area {
-  /*position: absolute;*/
-  top: 80px;
+  position: relative;
+  top: 190px;
+  /*top: 80px;*/
   /*right: 0;*/
   background-image: url(../images/grass900px.png);
   height: 240px;
-  margin-top: 240px;
+  /*margin-top: 240px;*/
 
+}
+
+#duck-one {
+  /*margin-top: 100px;*/
+  position: relative;
+  top: 400px;
+  left: -380px;
+
+}
+#duck-two {
+  position: relative;
+  top: 400px;
+  left: 300px;
+}
+
+.img {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+.ducks:hover {
+  cursor: crosshair;
 }
