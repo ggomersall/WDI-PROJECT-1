@@ -15,10 +15,12 @@ text-align: center;
   margin: 0 auto;
   position: absolute;
   margin-top: 20px;
+
 }
 #game-background {
   background-color: rgb(92, 132, 240);
   min-height: 550px;
+
 }
 
 #game-bar-top {
@@ -28,6 +30,7 @@ text-align: center;
   height: 50px; 
   position: relative;
   top: 0;
+  z-index: 1;
 }
 
 li{
@@ -44,22 +47,28 @@ li{
   /*top: 80px;*/
   /*right: 0;*/
   background-image: url(../images/grass900px.png);
-  height: 240px;
+  height: 182px;
   /*margin-top: 240px;*/
+  
+}
 
+.game-title {
+  position: relative;
+  top: 10px;
+  text-align: center;
 }
 
 #duck-one {
   /*margin-top: 100px;*/
   position: relative;
-  top: 400px;
-  left: -380px;
+  top: 380px;
+  left: 0px;
 
 }
 #duck-two {
   position: relative;
-  top: 400px;
-  left: 300px;
+  top: 380px;
+  left: 700px;
 }
 
 .img {

@@ -1,21 +1,71 @@
 $(function(){
 
+  $(".game-start").on("click", function(){
+    var duckOneMove = document.getElementById("duck-one");
+
+    var tlone = new TimelineLite();
+    tlone.to(duckOneMove, 1, {x:200, y:-400});
+    tlone.to(duckOneMove, 2, {x:400, y:0});
+    tlone.to(duckOneMove, 1, {x:600, y:-400});
+    tlone.to(duckOneMove, 1.25, {x:750, y:0});
+
+    var duckTwoMove = document.getElementById("duck-two");
+
+    var tltwo = new TimelineLite();
+    tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
+    tltwo.to(duckTwoMove, 1.2, {x:-400, y:0});
+    tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
+    tltwo.to(duckTwoMove, 1, {x:-750, y:0});
+
+  })
+
   
-  var duckOneMove = document.getElementById("duck-one");
-      TweenMax.to(duckOneMove, 3, {left:"380px", top:"-10", repeat:3, yoyo:true});
-      // TweenMax.from(duckOneMove, 4, {left:"-380px", top:"-380", repeat:5, yoyo:true});
-  
-  var duckTwoMove = document.getElementById("duck-two");
-      TweenMax.to(duckTwoMove, 3, {left:"-420px", top:"-10",  repeat:3, yoyo:true});
 
 
-  
 
   $(".ducks").on("click", function(){
-     console.log("duck clicked!")
+    console.log("duck clicked!")
 
-   })
-})
+    })
+
+
+  })
+
+
+  // var
+      // TweenMax.to(duckOneMove, 3, {left:"380px", top:"-10", repeat:3, yoyo:true});
+      // TweenMax.from(duckOneMove, 4, {left:"-380px", top:"-380", repeat:5, yoyo:true});
+  // function getAnimation() {
+  //   TweenLite.set(duckOneMove, {x:-30, y:300})
+
+  //   var bezTween = new TweenMax(duckOneMove, 6, {
+  //     bezier:{
+  //       type:"soft",
+  //       values:[{x:60, y:80}, {x:150, y:30}, {x:400 + Math.random() *100,
+  //        y:320*Math.random() + 50}, {x:500, y:320*Math.random() + 50}, {x:700, y:100}, {x:850, y:500}],
+
+  //     },
+  //     ease:Linear.easnone});
+  //   return bezTween;
+  // }
+
+  // function buildTimeline() {
+  //   tl = new TimelineMax({repeat: 2})
+  //   tl.add(getAnimation());
+  // }
+
+  // buildTimeline();
+  // tl.progress(0.5).timeScale(0)
+  
+  
+      // TweenMax.to(duckTwoMove, 3, {left:"-420px", top:"-10",  repeat:3, yoyo:true});
+
+  // function myFunction() {
+  //   alert("animation complete")
+  // }
+  
+
+
 
   
 
