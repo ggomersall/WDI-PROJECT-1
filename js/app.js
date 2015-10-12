@@ -25,22 +25,22 @@ $(function(){
 
       var tlone = new TimelineLite();
       tlone.to(duckOneMove, 1, {x:200, y:-400});
-      tlone.to(duckOneMove, 1.2, {x:400, y:0});
+      tlone.to(duckOneMove, 1.2, {x:400, y:1});
       tlone.to(duckOneMove, 1.5, {x:600, y:-400});
-      tlone.to(duckOneMove, 1.25, {x:750, y:0});
+      tlone.to(duckOneMove, 1.25, {x:750, y:1});
 
       //var duckTwoMove = document.getElementById("duck-two");
 
       var tltwo = new TimelineLite();
       tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
-      tltwo.to(duckTwoMove, 1.2, {x:-400, y:0});
+      tltwo.to(duckTwoMove, 1.2, {x:-400, y:1});
       tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
-      tltwo.to(duckTwoMove, 1, {x:-750, y:0});
+      tltwo.to(duckTwoMove, 1, {x:-750, y:1});
 
 
       // this sets the timeout for the current player game to end
       // then runs playerTwo Turn
-      setTimeout(function(){  playerTwoTurn(); }, 7000);
+      setTimeout(function(){  playerTwoTurn(); }, 6000);
 
 
   }
@@ -58,20 +58,22 @@ $(function(){
 
     var tlthree = new TimelineLite();
     tlthree.to(duckThreeMove, 1, {x:200, y:-400});
-    tlthree.to(duckThreeMove, 1.2, {x:400, y:0});
+    tlthree.to(duckThreeMove, 1.2, {x:400, y:1});
     tlthree.to(duckThreeMove, 1.5, {x:600, y:-400});
-    tlthree.to(duckThreeMove, 1.25, {x:750, y:0});
+    tlthree.to(duckThreeMove, 1.25, {x:750, y:1});
 
     //var duckTwoMove = document.getElementById("duck-two");
 
     var tlfour = new TimelineLite();
     tlfour.to(duckFourMove, 1, {x:-200, y:-400});
-    tlfour.to(duckFourMove, 1.2, {x:-400, y:0});
+    tlfour.to(duckFourMove, 1.2, {x:-400, y:1});
     tlfour.to(duckFourMove, 1.5, {x:-600, y:-400});
-    tlfour.to(duckFourMove, 1, {x:-750, y:0});
+    tlfour.to(duckFourMove, 1, {x:-750, y:1});
 
 
-    setTimeout(function(){ alert("game over")  }, 7000);
+    setTimeout(function(){ alert("game over")  }, 6000);
+
+    // alert("player one score = "+playerOneScore " vs " + "player two score "+playerTwoScore)
 
   }
 
