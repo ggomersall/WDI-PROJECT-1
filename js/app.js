@@ -2,36 +2,101 @@ $(function(){
 
   var playerOneScore = 0;
   var playerTwoScore = 0;
+  // var duckPoints = 100;
   var winner
+  var duckOneMove = document.getElementById("duck-one");
+  var duckTwoMove = document.getElementById("duck-two");
+  var duckThreeMove = document.getElementById("duck-three")
+  var duckFourMove = document.getElementById("duck-four")
+
+  var counter = 1;
+  var gameStart = document.getElementById("gamestart")
+  $(".game-start").on("click", playerOneTurn);
 
 
-  $(".game-start").on("click", function(){
-    var duckOneMove = document.getElementById("duck-one");
+  function playerOneTurn() {
 
-    var tlone = new TimelineLite();
-    tlone.to(duckOneMove, 5, {x:200, y:-400});
-    tlone.to(duckOneMove, 5, {x:400, y:0});
-    tlone.to(duckOneMove, 5, {x:600, y:-400});
-    tlone.to(duckOneMove, 1.25, {x:750, y:0});
+    alert("player 1 get ready")
+    $(".playone-ducks").on("click", function(){
+      playerOneScore += 100
+      console.log("player one points =" + playerOneScore)
+      
+    })
 
-    var duckTwoMove = document.getElementById("duck-two");
+      var tlone = new TimelineLite();
+      tlone.to(duckOneMove, 1, {x:200, y:-400});
+      tlone.to(duckOneMove, 1.2, {x:400, y:0});
+      tlone.to(duckOneMove, 1.5, {x:600, y:-400});
+      tlone.to(duckOneMove, 1.25, {x:750, y:0});
 
-    var tltwo = new TimelineLite();
-    tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
-    tltwo.to(duckTwoMove, 1.2, {x:-400, y:0});
-    tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
-    tltwo.to(duckTwoMove, 1, {x:-750, y:0});
+      //var duckTwoMove = document.getElementById("duck-two");
 
-  })
+      var tltwo = new TimelineLite();
+      tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
+      tltwo.to(duckTwoMove, 1.2, {x:-400, y:0});
+      tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
+      tltwo.to(duckTwoMove, 1, {x:-750, y:0});
 
-  $(".ducks").on("click", function(){
-    // console.log("duck clicked!")
+
+      // this sets the timeout for the current player game to end
+      // then runs playerTwo Turn
+      setTimeout(function(){  playerTwoTurn(); }, 7000);
+
+
+  }
+
+  function playerTwoTurn() {
+    alert("player 2 get ready")
+
+    $(".playtwo-ducks").on("click", function(){
+      // console.log("duck clicked!")
+      //duckOneMove.hide()
+      playerTwoScore += 100
+      console.log("player two points =" + playerTwoScore)
+      
+    })
+
+    var tlthree = new TimelineLite();
+    tlthree.to(duckThreeMove, 1, {x:200, y:-400});
+    tlthree.to(duckThreeMove, 1.2, {x:400, y:0});
+    tlthree.to(duckThreeMove, 1.5, {x:600, y:-400});
+    tlthree.to(duckThreeMove, 1.25, {x:750, y:0});
+
+    //var duckTwoMove = document.getElementById("duck-two");
+
+    var tlfour = new TimelineLite();
+    tlfour.to(duckFourMove, 1, {x:-200, y:-400});
+    tlfour.to(duckFourMove, 1.2, {x:-400, y:0});
+    tlfour.to(duckFourMove, 1.5, {x:-600, y:-400});
+    tlfour.to(duckFourMove, 1, {x:-750, y:0});
+
+
+    setTimeout(function(){ alert("game over")  }, 7000);
+
+  }
+
+  function getWinner() {
+
+
+  }
+
+  // $(".ducks").on("click", function(){
+  //   // console.log("duck clicked!")
+  //   //duckOneMove.hide()
+  //   if (playerOneTurn) {
+      
+  //   } else {
+  //     playerTwoScore += 100
+  //     console.log("player one points =" + playerTwoScore)
+  //   }
     
-    playerOneScore += 100
-    console.log(playerOneScore)
-  })
+  // })
 
 })
+
+// need to add some function to show the winner by comparing player one score
+// vs player 2 score
+
 
 
   // var
