@@ -1,12 +1,17 @@
 $(function(){
 
+  var playerOneScore = 0;
+  var playerTwoScore = 0;
+  var winner
+
+
   $(".game-start").on("click", function(){
     var duckOneMove = document.getElementById("duck-one");
 
     var tlone = new TimelineLite();
-    tlone.to(duckOneMove, 1, {x:200, y:-400});
-    tlone.to(duckOneMove, 2, {x:400, y:0});
-    tlone.to(duckOneMove, 1, {x:600, y:-400});
+    tlone.to(duckOneMove, 5, {x:200, y:-400});
+    tlone.to(duckOneMove, 5, {x:400, y:0});
+    tlone.to(duckOneMove, 5, {x:600, y:-400});
     tlone.to(duckOneMove, 1.25, {x:750, y:0});
 
     var duckTwoMove = document.getElementById("duck-two");
@@ -19,17 +24,14 @@ $(function(){
 
   })
 
-  
-
-
-
   $(".ducks").on("click", function(){
-    console.log("duck clicked!")
-
-    })
-
-
+    // console.log("duck clicked!")
+    
+    playerOneScore += 100
+    console.log(playerOneScore)
   })
+
+})
 
 
   // var
