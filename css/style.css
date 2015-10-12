@@ -101,41 +101,41 @@ button {
   margin-left: 5px;
 }
 
-#duck {
+/*#duck {
   position: relative;
   top: 0
 
-}
+}*/
 
 #duck-one {
   /*margin-top: 100px;*/
   position: relative;
-  top: 250px;
+  top: 230px;
   left: 3px;
 
 }
 #duck-two {
   position: relative;
-  top: 250px;
+  top: 230px;
   left: 700px;
 }
 
 #duck-three {
   /*margin-top: 100px;*/
   position: relative;
-  top: 250px;
+  top: 230px;
   left: -190px;
 
 }
 #duck-four {
   position: relative;
-  top: 250px;
+  top: 230px;
   left: 500px;
 }
 
 #grass-area {
   position: relative;
-  top: 70px;
+  top: 46px;
   /*top: 80px;*/
   /*right: 0;*/
   background-image: url(../images/grass900px.png);
