@@ -1,3 +1,17 @@
+To Do - 13 Oct
+
+when game starts hide the title and buttons
+
+build the functionality that shows the score on the player bar
+
+build winner functionality
+when game ends show the winner in the game area including a button to play again,
+that refreshes the game.
+
+finally add final bit of styling to the game
+
+
+
 // GAME IDEA - DUCK HUNT
 // my game will be based on duck hunt
 

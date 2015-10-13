@@ -2,7 +2,6 @@ $(function(){
 
   var playerOneScore = 0;
   var playerTwoScore = 0;
-  // var duckPoints = 100;
   var winner
   var duckOneMove = document.getElementById("duck-one");
   var duckTwoMove = document.getElementById("duck-two");
@@ -16,16 +15,20 @@ $(function(){
 
   function playerOneTurn() {
 
+    $(".game-info").fadeTo(0, 0);
+    $(".game-start").fadeTo(0, 0);
+
     alert("player 1 get ready")
     $(".playone-ducks").on("click", function(){
-      playerOneScore += 100
-      console.log("player one points =" + playerOneScore)
+      playerOneScore += 100;
+      $("#player-one-score").text(playerOneScore);
+      console.log("player one points =" + playerOneScore);
       
     })
 
       var tlone = new TimelineLite();
       tlone.to(duckOneMove, 1, {x:200, y:-400});
-      tlone.to(duckOneMove, 1.2, {x:400, y:1});
+      tlone.to(duckOneMove, 1.7, {x:400, y:1});
       tlone.to(duckOneMove, 1.5, {x:600, y:-400});
       tlone.to(duckOneMove, 1.25, {x:750, y:1});
 
@@ -33,7 +36,7 @@ $(function(){
 
       var tltwo = new TimelineLite();
       tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
-      tltwo.to(duckTwoMove, 1.2, {x:-400, y:1});
+      tltwo.to(duckTwoMove, 1.7, {x:-400, y:1});
       tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
       tltwo.to(duckTwoMove, 1, {x:-750, y:1});
 
@@ -51,14 +54,16 @@ $(function(){
     $(".playtwo-ducks").on("click", function(){
       // console.log("duck clicked!")
       //duckOneMove.hide()
-      playerTwoScore += 100
+      playerTwoScore += 100;
+      $("#player-two-score").text(playerTwoScore);
+
       console.log("player two points =" + playerTwoScore)
       
     })
 
     var tlthree = new TimelineLite();
     tlthree.to(duckThreeMove, 1, {x:200, y:-400});
-    tlthree.to(duckThreeMove, 1.2, {x:400, y:1});
+    tlthree.to(duckThreeMove, 1.7, {x:400, y:1});
     tlthree.to(duckThreeMove, 1.5, {x:600, y:-400});
     tlthree.to(duckThreeMove, 1.25, {x:750, y:1});
 
@@ -66,20 +71,28 @@ $(function(){
 
     var tlfour = new TimelineLite();
     tlfour.to(duckFourMove, 1, {x:-200, y:-400});
-    tlfour.to(duckFourMove, 1.2, {x:-400, y:1});
+    tlfour.to(duckFourMove, 1.7, {x:-400, y:1});
     tlfour.to(duckFourMove, 1.5, {x:-600, y:-400});
     tlfour.to(duckFourMove, 1, {x:-750, y:1});
 
 
-    setTimeout(function(){ alert("game over")  }, 6000);
+    setTimeout(function(){ getWinner() }, 6000);
 
     // alert("player one score = "+playerOneScore " vs " + "player two score "+playerTwoScore)
 
   }
 
-  function getWinner(playerOneScore, playerTwoScore) {
-
-    
+  function getWinner(playerOneTurn, playerTwoTurn) {
+    if(playerOneScore === playerTwoScore){
+      $(".game-info").fadeTo(0, 1).text("It's a tie")
+      $(".game-start").fadeTo(0, 1).text("Play Again ?").on("click", function(){
+        location.reload(true);
+      })
+    } else if (playerOneScore > playerTwoScore) {
+      $(".game-info").fadeTo(0, 1).text("Player One Wins The Game!!")
+    } else {
+      $(".game-info").fadeTo(0, 1).text("Player Two Wins The Game!!")
+    }
 
 
   }
