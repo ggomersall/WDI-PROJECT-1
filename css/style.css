@@ -2,6 +2,9 @@ body {
   max-width: 960px;
   margin: 0 auto;
   font-family: 'Indie Flower', cursive;
+  background-image: url("../images/Duck-Green-Background.jpg");
+  background-repeat: none;
+  background-size: cover;
 
 }
 
@@ -16,23 +19,18 @@ text-align: center;
   margin: 0 auto;
   position: absolute;
   margin-top: 20px;
+  margin-left: 20px;
+  border:3px solid black;
+  border-radius: 5px;
 
 }
 #game-background {
   background-color: rgb(92, 132, 240);
   min-height: 550px;
-
+  margin-top: -24px;
+  border-radius: 5px;
 }
 
-#game-bar-top {
-  background-color: orange;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  height: 50px; 
-  position: relative;
-  top: 0;
-  z-index: 1;
-}
 
 li{
   display: inline;
@@ -78,6 +76,7 @@ button {
   background-color: orange;
   border-bottom-right-radius: 10px;
   box-shadow: 5px 5px 5px #000;
+  border-top-left-radius: 5px;
 }
 #playerone-box h4{
   font-size: 18px;
@@ -100,6 +99,7 @@ button {
   background-color: orange;
   border-bottom-left-radius: 10px;
   box-shadow: -5px 5px 5px #000;
+  border-top-right-radius: 5px;
   
 }
 #playertwo-box h4{
@@ -143,6 +143,9 @@ button {
   top: 40px;
   background-image: url(../images/grass900px.png);
   height: 182px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
   
 }
 .ducks:hover {

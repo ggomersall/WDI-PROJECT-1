@@ -16,7 +16,7 @@ $(function(){
 
 
   function playerOneTurn() {
-
+    
     $(".game-info").fadeTo(0, 0);
 
     $(".game-start").fadeTo(0, 0, function(){
