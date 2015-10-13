@@ -18,7 +18,10 @@ $(function(){
   function playerOneTurn() {
 
     $(".game-info").fadeTo(0, 0);
-    $(".game-start").fadeTo(0, 0);
+
+    $(".game-start").fadeTo(0, 0, function(){
+      $(this).attr("disabled", "disabled")
+    });
 
     alert("player 1 get ready")
     $(".playone-ducks").on("click", function(){
@@ -30,17 +33,17 @@ $(function(){
 
       var tlone = new TimelineLite();
       tlone.to(duckOneMove, 1, {x:200, y:-400});
-      tlone.to(duckOneMove, 1.7, {x:400, y:1});
+      tlone.to(duckOneMove, 1.7, {x:400, y:0});
       tlone.to(duckOneMove, 1.5, {x:600, y:-400});
-      tlone.to(duckOneMove, 1.25, {x:750, y:1});
+      tlone.to(duckOneMove, 1.25, {x:750, y:0});
 
       //var duckTwoMove = document.getElementById("duck-two");
 
       var tltwo = new TimelineLite();
       tltwo.to(duckTwoMove, 1, {x:-200, y:-400});
-      tltwo.to(duckTwoMove, 1.7, {x:-400, y:1});
+      tltwo.to(duckTwoMove, 1.7, {x:-400, y:0});
       tltwo.to(duckTwoMove, 1.5, {x:-600, y:-400});
-      tltwo.to(duckTwoMove, 1, {x:-750, y:1});
+      tltwo.to(duckTwoMove, 1, {x:-750, y:0});
 
 
       // this sets the timeout for the current player game to end
@@ -65,17 +68,17 @@ $(function(){
 
     var tlthree = new TimelineLite();
     tlthree.to(duckThreeMove, 1, {x:200, y:-400});
-    tlthree.to(duckThreeMove, 1.7, {x:400, y:1});
+    tlthree.to(duckThreeMove, 1.7, {x:400, y:0});
     tlthree.to(duckThreeMove, 1.5, {x:600, y:-400});
-    tlthree.to(duckThreeMove, 1.25, {x:750, y:1});
+    tlthree.to(duckThreeMove, 1.25, {x:750, y:0});
 
     //var duckTwoMove = document.getElementById("duck-two");
 
     var tlfour = new TimelineLite();
     tlfour.to(duckFourMove, 1, {x:-200, y:-400});
-    tlfour.to(duckFourMove, 1.7, {x:-400, y:1});
+    tlfour.to(duckFourMove, 1.7, {x:-400, y:0});
     tlfour.to(duckFourMove, 1.5, {x:-600, y:-400});
-    tlfour.to(duckFourMove, 1, {x:-750, y:1});
+    tlfour.to(duckFourMove, 1, {x:-750, y:0});
 
 
     setTimeout(function(){ getWinner() }, 6000);

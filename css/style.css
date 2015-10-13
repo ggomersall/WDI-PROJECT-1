@@ -65,6 +65,10 @@ button {
   font-family: 'Indie Flower', cursive;
 }
 
+.game-reload{
+  margin-left: 150px;
+}
+
 #playerone-box {
   position: relative;
   top: 0;
