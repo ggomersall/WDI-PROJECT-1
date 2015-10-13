@@ -30,7 +30,6 @@ $(function(){
       squawk.play()
       playerOneScore += 100;
       $("#player-one-score").text(playerOneScore);
-      console.log("player one points =" + playerOneScore);
       
     })
 
@@ -64,7 +63,6 @@ $(function(){
       playerTwoScore += 100;
       $("#player-two-score").text(playerTwoScore);
 
-      console.log("player two points =" + playerTwoScore)
       
     })
 
