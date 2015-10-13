@@ -9,6 +9,8 @@ $(function(){
   var duckFourMove = document.getElementById("duck-four")
 
   var counter = 1;
+
+  $(".game-reload").hide()
   var gameStart = document.getElementById("gamestart")
   $(".game-start").on("click", playerOneTurn);
 
@@ -85,15 +87,16 @@ $(function(){
   function getWinner(playerOneTurn, playerTwoTurn) {
     if(playerOneScore === playerTwoScore){
       $(".game-info").fadeTo(0, 1).text("It's a tie")
-      $(".game-start").fadeTo(0, 1).text("Play Again ?").on("click", function(){
-        location.reload(true);
-      })
+
     } else if (playerOneScore > playerTwoScore) {
       $(".game-info").fadeTo(0, 1).text("Player One Wins The Game!!")
     } else {
       $(".game-info").fadeTo(0, 1).text("Player Two Wins The Game!!")
     }
 
+    $(".game-reload").fadeTo(0, 1).text("Play Again ?").on("click", function(){
+      location.reload();
+    })
 
   }
 
