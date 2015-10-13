@@ -9,7 +9,7 @@ body {
 }
 
 body h1{
-text-align: center;
+  text-align: center;
 
 }
 
@@ -53,6 +53,14 @@ li{
   margin-top: -13px;
 
 }
+.player-alert {
+  position: absolute;
+  top: 100px;  
+  left: 35%;  
+  margin-left: -50px;
+  font-size: 20px;
+}
+
 button {
   height: 35px;
   width: 150px;
@@ -116,41 +124,42 @@ button {
 
 #duck-one {
   position: relative;
-  top: 230px;
+  top: 233px;
   left: 3px;
 
 }
 #duck-two {
   position: relative;
-  top: 230px;
+  top: 233px;
   left: 700px;
 }
 
 #duck-three {
   position: relative;
-  top: 230px;
+  top: 233px;
   left: -190px;
 
 }
 #duck-four {
   position: relative;
-  top: 230px;
+  top: 233px;
   left: 500px;
 }
 
-#grass-area {
-  position: relative;
-  top: 40px;
-  background-image: url(../images/grass900px.png);
-  height: 182px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 
-  
-}
-.ducks:hover {
-  cursor: crosshair;
-}
+  #grass-area {
+    position: relative;
+    top: 40px;
+    background-image: url(../images/grass900px.png);
+    height: 182px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+  }
+  .ducks:hover {
+    cursor: crosshair;
+  }
 
 /*.img {
     transform: scale(-1, 1);
@@ -159,5 +168,5 @@ button {
     -o-transform: scale(-1, 1);
     -khtml-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
-}*/
+    }*/
 
